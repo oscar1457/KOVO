@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOVO | Peak Performance Footwear</title>
+  <meta name="description"
+    content="Discover KOVO, the ultimate mountain shoe for extreme conditions. Modern design meets technological excellence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="simple-loader"
+    style="position:fixed; inset:0; background:#050505; display:flex; justify-content:center; align-items:center; z-index:999999; transition:opacity 0.8s ease;">
+    <div style="width: 150px; text-align: center;">
+      <svg viewBox="0 0 100 60" style="fill:none; stroke:#ccff00; stroke-width:2; stroke-linecap:round;">
+        <path id="mountain-path" d="M5 55 L35 15 L50 35 L70 5 L95 55 Z"
+          style="stroke-dasharray: 300; stroke-dashoffset: 300;"></path>
+      </svg>
+      <p style="color:#fff; font-family:sans-serif; font-size:10px; letter-spacing:5px; margin-top:15px; opacity:0.5;">
+        LOADING</p>
+    </div>
+  </div>
+
+  <div id="app">
+    <nav id="navbar" class="glass">
+      <div class="nav-container">
+        <a href="/" class="logo">
+          <span class="logo-alt">ALPINE DIVISION</span>
+          <span class="logo-main">KOVO</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#performance">Performance</a></li>
+          <li><a href="#anatomy">Technology</a></li>
+          <li><a href="#craftsmanship">Design</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="video-container">
+        <video autoplay loop muted playsinline class="hero-fallback-img">
+          <source src="/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="brand-title">
+          <span class="letter">K</span>
+          <span class="letter">O</span>
+          <span class="letter">V</span>
+          <span class="letter">O</span>
+        </h1>
+        <p class="subtitle reveal-text">Elevating every step.</p>
+      </div>
+
+      <!-- Hero HUD Overlay -->
+      <div class="hero-hud">
+        <div class="hud-item">ALT: 8,848M</div>
+        <div class="hud-item">WIND: 45KT</div>
+        <div class="hud-item bottom-right">TEMP: -35°C</div>
+      </div>
+    </section>
+
+    <!-- Trusted Partners Strip -->
+    <div class="partners-strip">
+      <div class="container marquee">
+        <span>ALPS RESEARCH™</span>
+        <span>CARBON LABS</span>
+        <span>GORE-PRO</span>
+        <span>VIBRAM® ARCTIC</span>
+        <span>RED BULL X-ALPS</span>
+        <span>ALPS RESEARCH™</span> <!-- Repetir para efecto marquee si se desea después -->
+      </div>
+    </div>
+
+    <section id="performance" class="feature-section">
+      <div class="macro-text">APEX</div>
+      <div class="container">
+        <div class="feature-content">
+          <span class="tag">Unmatched Grip</span>
+          <h2>Defy Gravity</h2>
+
+          <div class="metric-block">
+            <span class="metric-number">40%</span>
+            <span class="metric-label">MORE TRACTION<br>ON WET ICE</span>
+          </div>
+
+          <p class="metric-context">Powered by proprietary ApexGrip™ compound vs. industry standard rubber.</p>
+        </div>
+        <div class="feature-image">
+          <!-- Tactical Inspection Viewer -->
+          <div class="tactical-viewer" id="main-product-viewer">
+            <!-- Diagnostic Layers -->
+            <div class="diagnostic-layer active" data-mode="EXT" id="layer-exterior">
+              <img src="/shoe.png" alt="KOVO Exterior" id="main-shoe">
+            </div>
+            <div class="diagnostic-layer" data-mode="CORE" id="layer-chassis">
+              <img src="/core.png" alt="KOVO Chassis">
+            </div>
+            <div class="diagnostic-layer" data-mode="APEX" id="layer-traction">
+              <img src="/sole.png" alt="KOVO Traction">
+            </div>
+
+            <!-- Scanner Line Effect -->
+            <div class="scanner-line"></div>
+
+            <!-- Viewer HUD -->
+            <div class="viewer-hud">
+              <div class="mode-selector">
+                <button class="mode-btn active" data-target="EXT">EXT</button>
+                <button class="mode-btn" data-target="CORE">CORE</button>
+                <button class="mode-btn" data-target="APEX">APEX</button>
+              </div>
+
+              <div class="diagnostic-data">
+                <div class="data-point" id="diag-label">SYSTEM: OPTIMAL</div>
+                <div class="data-point" id="diag-value">CHASSIS HOLD: 100%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color Swatches (Restored) -->
+          <div class="color-swatches">
+            <div class="swatch" data-color="#ccff00" style="background: #ccff00;"></div>
+            <div class="swatch" data-color="#ff4433" style="background: #ff4433;"></div>
+            <div class="swatch" data-color="#33aaff" style="background: #33aaff;"></div>
+            <div class="swatch" data-color="#ffffff" style="background: #ffffff;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anatomy" class="feature-section">
+      <div class="container anatomy-grid">
+        <div class="feature-content text-left">
+          <span class="tag">Engineering Architecture</span>
+          <h2>Internal Anatomy</h2>
+          <p>Every KOVO boot is a masterpiece of layered precision. We've stripped away the outer shell to reveal the
+            uncompromising core of our performance technology.</p>
+
+          <ul class="engineering-specs">
+            <li>
+              <strong>Structural Rigidity:</strong>
+              <span>V3 Carbon Core offers 15% more torsional support without adding weight.</span>
+            </li>
+            <li>
+              <strong>Impact Absorption:</strong>
+              <span>Multi-density EVA midsole designed for vertical decompression.</span>
+            </li>
+            <li>
+              <strong>Thermal Barrier:</strong>
+              <span>Aerogel-infused base layer rated for sub-zero alpine conditions.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="anatomy-visual-column">
+          <div class="anatomy-container" id="anatomy-viz">
+            <!-- Central Axis / Tech Decoration -->
+            <div class="tech-axis"></div>
+
+            <div class="anatomy-layer layer-core" data-label="EXPLOSIVE POWER TRANSFER"></div>
+            <div class="anatomy-layer layer-sole" data-label="ZERO-SLIP TRACTION"></div>
+
+            <!-- Certification Badge -->
+            <div class="cert-badge">PATENT PENDING</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="craftsmanship" class="feature-section alt">
+      <div class="container reverse">
+        <div class="feature-content">
+          <span class="tag">Pure Craftsmanship</span>
+          <h2>Forged in the Alps</h2>
+          <p>Every pair of KOVO boots is a product of Italian heritage. 120 hours of manual assembly by master
+            cobblers in the Dolomites ensures a perfect fit that lasts a lifetime.</p>
+        </div>
+        <div class="feature-image">
+          <div class="parallax-img-container">
+            <img src="/workshop.png" alt="KOVO Alpine Workshop" class="parallax-img content-img" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="specs-section">
+      <div class="container">
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label-tech">NET WEIGHT</span>
+            <span class="spec-val">420g</span>
+            <span class="spec-desc">LIGHTWEIGHT ARMOR</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label-tech">HYDRO-SHIELD</span>
+            <span class="spec-val">100%</span>
+            <span class="spec-desc">GORE-TEX PRO</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label-tech">THERMAL LIM</span>
+            <span class="spec-val">-30°C</span>
+            <span class="spec-desc">CRYOGENIC DEFENSE</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label-tech">TRACTION</span>
+            <span class="spec-val">V3</span>
+            <span class="spec-desc">APEX-GRIP COMPOUND</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expeditions" class="feature-section">
+      <div class="container">
+        <div class="reports-header">
+          <div class="header-left">
+            <span class="tag">MISSION ARCHIVE</span>
+            <h2>GLOBAL FIELD REPORTS</h2>
+          </div>
+          <div class="header-right">
+            <span class="report-stat">STATUS: <strong>CLASSIFIED</strong></span>
+            <span class="report-stat">LOGS: <strong>03</strong></span>
+            <div class="tech-divider"></div>
+          </div>
+        </div>
+      </div>
+      <div class="stories-overflow">
+        <div class="stories-grid">
+          <div class="card-wrapper">
+            <div class="story-card">
+              <div class="story-img-container">
+                <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&q=80&w=600"
+                  class="story-img" alt="Everest Expedition" loading="lazy">
+                <div class="mission-overlay">
+                  <span>ALT: 8,848M</span>
+                  <span>O2: 32%</span>
+                </div>
+              </div>
+              <div class="story-content">
+                <div class="mission-header">
+                  <span class="mission-id">OP: KHUMBU</span>
+                  <span class="mission-status active">ACTIVE</span>
+                </div>
+                <h4>Everest Icefall Test</h4>
+                <p>Structural integrity valid at -40°C. ApexGrip hold confirmed on blue ice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrapper">
+            <div class="story-card">
+              <div class="story-img-container">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600"
+                  class="story-img" alt="Alps Crossing">
+                <div class="mission-overlay">
+                  <span>DIST: 1200KM</span>
+                  <span>FAILURES: 0</span>
+                </div>
+              </div>
+              <div class="story-content">
+                <div class="mission-header">
+                  <span class="mission-id">OP: TRANS-ALPS</span>
+                  <span class="mission-status success">SUCCESS</span>
+                </div>
+                <h4>The Great Traverse</h4>
+                <p>14 days of continuous wear. Zero blistering. Waterproofing integrity 100%.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrapper">
+            <div class="story-card">
+              <div class="story-img-container">
+                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=600"
+                  class="story-img" alt="Patagonia Expedition">
+                <div class="mission-overlay">
+                  <span>WIND: 120KM/H</span>
+                  <span>VIS: 5M</span>
+                </div>
+              </div>
+              <div class="story-content">
+                <div class="mission-header">
+                  <span class="mission-id">OP: PATAGONIA</span>
+                  <span class="mission-status success">SUCCESS</span>
+                </div>
+                <h4>Glacier Survival</h4>
+                <p>Impact protection critical during serac collapse. Crew safe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Field Reports (Social Proof) -->
+    <section id="field-reports" class="feature-section">
+      <div class="container">
+        <div class="reports-header text-center" style="margin-bottom: 4rem;">
+          <span class="tag">Global Dispatches</span>
+          <h2 style="margin-top: 1rem;">Field Reports.</h2>
+        </div>
+
+        <div class="dispatch-grid">
+          <!-- Dispatch 01 -->
+          <div class="dispatch-card reveal">
+            <div class="dispatch-header">
+              <span class="dispatch-id">ID: ARIS_K2</span>
+              <span class="dispatch-verified">VERIFIED BY KOVO LABS</span>
+            </div>
+            <div class="dispatch-profile">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces"
+                alt="Sir Aris K." class="profile-img">
+              <div class="profile-meta">
+                <span class="profile-name">SIR ARIS K.</span>
+                <span class="profile-role">ALPINE SPECIALIST</span>
+              </div>
+            </div>
+            <p class="dispatch-body">
+              "When the temperature dropped to -55°C on the traverse, I stopped feeling my boots, but the gear didn't
+              stop working. <strong>KOVO saved my toes on K2.</strong> Period."
+            </p>
+            <div class="dispatch-footer">
+              <span class="dispatch-location">8,611m | SAVOIA RIDGE</span>
+              <button class="video-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">[▶ VER DESPACHO]</button>
+            </div>
+          </div>
+
+          <!-- Dispatch 02 -->
+          <div class="dispatch-card reveal">
+            <div class="dispatch-header">
+              <span class="dispatch-id">ID: ELENA_MATTERHORN</span>
+              <span class="dispatch-verified">VERIFIED BY KOVO LABS</span>
+            </div>
+            <div class="dispatch-profile">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces"
+                alt="Elena R." class="profile-img">
+              <div class="profile-meta">
+                <span class="profile-name">ELENA R.</span>
+                <span class="profile-role">ICE CLIMBING EXPERT</span>
+              </div>
+            </div>
+            <p class="dispatch-body">
+              "The ApexGrip isn't just rubber; it's a structural insurance policy. It held on blue ice where my previous
+              technical boots failed. Absolute precision."
+            </p>
+            <div class="dispatch-footer">
+              <span class="dispatch-location">NORTH FACE | ZERMATT</span>
+              <button class="video-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">[▶ VER DESPACHO]</button>
+            </div>
+          </div>
+
+          <!-- Dispatch 03 -->
+          <div class="dispatch-card reveal">
+            <div class="dispatch-header">
+              <span class="dispatch-id">ID: TEST_GROUP_7</span>
+              <span class="dispatch-verified">VERIFIED BY KOVO LABS</span>
+            </div>
+            <div class="dispatch-profile">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces"
+                alt="Test Team Lead" class="profile-img">
+              <div class="profile-meta">
+                <span class="profile-name">WINTER TEST TEAM</span>
+                <span class="profile-role">ARCTIC OPERATIONS</span>
+              </div>
+            </div>
+            <p class="dispatch-body">
+              "120 hours of continuous activity in the Norwegian winter. Zero thermal leakage detected within the V3
+              Carbon Core. This is the new gold standard."
+            </p>
+            <div class="dispatch-footer">
+              <span class="dispatch-location">TROMSØ | NORWAY</span>
+              <button class="video-btn" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">[▶ VER DESPACHO]</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sustainability" class="feature-section alt">
+      <div class="container sustainability-container">
+        <div class="video-frame"> <video autoplay loop muted playsinline class="video-asset">
+            <source src="public/Recycle.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="feature-content">
+          <span class="tag">Ethical Future</span>
+          <h2>100% Recycled Carbon</h2>
+          <p>Our commitment to the mountain is absolute. We use fully recycled aerospace-grade carbon and bio-based
+            rubbers to minimize our footprint.</p>
+
+          <div class="sustainability-metrics">
+            <div class="metric-item">
+              <span class="metric-value">87%</span>
+              <span class="metric-desc">CO₂ Reduction</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">100%</span>
+              <span class="metric-desc">Recycled Materials</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-value">Zero</span>
+              <span class="metric-desc">Waste to Landfill</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Basecamp Support (FAQ) -->
+    <section id="faq" class="feature-section">
+      <div class="container">
+        <div class="feature-content" style="max-width: 900px; margin: 0 auto; grid-column: 1 / -1; text-align: left;">
+          <span class="tag">Technical Manual</span>
+          <h2>Basecamp Support.</h2>
+          <p style="margin-bottom: 4rem;">Critical data for high-altitude deployment and long-term maintenance
+            protocols.</p>
+
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <button class="faq-trigger">
+                <span class="faq-header">
+                  <span class="faq-no">01</span>
+                  <span class="faq-title">Thermal Resistance Thresholds</span>
+                </span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p>KOVO boots are rated for static hold at -40°C and active traverse down to -60°C. The V3 Carbon Core
+                    maintains internal heat through kinetic recovery, utilizing movement to recharge the aerogel
+                    insulation layers.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-trigger">
+                <span class="faq-header">
+                  <span class="faq-no">02</span>
+                  <span class="faq-title">Global Warranty Protocol</span>
+                </span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p>Lifetime structural warranty. If the carbon core fails during a mission, we deploy a replacement
+                    pair to any basecamp worldwide via specialized alpine logistics. Your mission safety is our primary
+                    engineering metric.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-trigger">
+                <span class="faq-header">
+                  <span class="faq-no">03</span>
+                  <span class="faq-title">Carbon Core Integrity</span>
+                </span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p>The chassis is tested for 2,000kg of vertical pressure. Each unit is X-ray scanned for
+                    micro-fractures and stress-tested in our simulated vacuum chamber before leaving the Alpine Division
+                    workshop.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready for the peak?</h2>
+          <a href="#" class="primary-button">Pre-order now</a>
+          <p style="margin-top: 2rem; color: var(--secondary); font-size: 0.75rem; letter-spacing: 0.5px;">Shipping
+            Spring 2026. Limited early bird edition.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Summit List (Lead Capture) -->
+    <section id="newsletter" class="cta-section" style="background: #000; border-top: 1px solid var(--glass-border);">
+      <div class="container">
+        <div class="cta-box">
+          <span class="tag">Priority Access</span>
+          <h2>Join the Summit List.</h2>
+          <p style="max-width: 600px; margin: 0 auto 3rem;">Receive global mission reports, maintenance whitepapers, and
+            exclusive early access to limited gear drops.</p>
+          <form id="summit-form" class="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="EMAIL@KOVO.ALPS" required>
+              <button type="submit" class="primary-button submit-btn">Request Access</button>
+            </div>
+            <p class="disclaimer"
+              style="margin-top: 1.5rem; opacity: 0.4; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;">
+              Tactical Communications Protocol Active. No Spam.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="terminal-footer">
+      <div class="container">
+        <div class="terminal-header">
+          <div class="status-indicator">
+            <span class="status-dot pulse"></span>
+            <span class="status-text">SYSTEM STATUS: ACTIVE</span>
+          </div>
+          <div class="terminal-version">KOVO_OS_v1.0.42</div>
+        </div>
+
+        <div class="terminal-grid">
+          <div class="terminal-col">
+            <h4 class="terminal-label">NAVIGATION</h4>
+            <ul>
+              <li><a href="#performance">01 PERFORMANCE</a></li>
+              <li><a href="#anatomy">02 TECHNOLOGY</a></li>
+              <li><a href="#expeditions">03 EXPEDITIONS</a></li>
+              <li><a href="#faq">04 SUPPORT</a></li>
+            </ul>
+          </div>
+          <div class="terminal-col">
+            <h4 class="terminal-label">RESOURCES</h4>
+            <ul>
+              <li><a href="#">MISSION_LOGS.PDF</a></li>
+              <li><a href="#">APEX_ONE_MANUAL.DRV</a></li>
+              <li><a href="#">CARBON_WHITE_PAPER.MD</a></li>
+            </ul>
+          </div>
+          <div class="terminal-col">
+            <h4 class="terminal-label">OPERATIONAL DATA</h4>
+            <div class="data-block">
+              <div class="data-row">
+                <span class="row-label">LOCATION:</span>
+                <span class="row-value">46.5405° N, 11.6702° E</span>
+              </div>
+              <div class="data-row">
+                <span class="row-label">ALPS_TIME:</span>
+                <span class="row-value" id="alpine-clock">00:00:00 CET</span>
+              </div>
+              <div class="data-row">
+                <span class="row-label">SERVER:</span>
+                <span class="row-value" id="server-uptime">UPTIME 99.9%</span>
+              </div>
+              <div class="data-row">
+                <span class="row-label">LATENCY:</span>
+                <span class="row-value" id="ping-ms">12ms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal-bottom">
+          <div class="footer-logo">KOVO</div>
+          <div class="copyright">&copy; 2026 KOVO ALPINE DIVISION. ALL RIGHTS RESERVED.</div>
+          <div class="security-stamp">ENCRYPTION: AES-256</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="sticky-buy-dock">
+    <div class="product-info-dock">
+      <span class="dock-model">KOVO APEX-ONE</span>
+      <span class="dock-price">$450.00</span>
+    </div>
+    <a href="#shop" class="dock-btn">PRE-ORDER</a>
+  </div>
+
+  <!-- Video Modal -->
+  <div id="video-modal" class="video-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="close-modal">&times;</button>
+      <div class="modal-video-wrapper">
+        <iframe id="video-iframe" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
